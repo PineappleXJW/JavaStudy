@@ -20,3 +20,6 @@
 
     String类是SUN编写的，所以String类的equals方法重写了。
     以后判断两个字符串是否相等，最好不要使用 == ，要调用字符串对象的equals方法。
+
+3、finalize()方法：
+    这个方法是时protected修饰的，
