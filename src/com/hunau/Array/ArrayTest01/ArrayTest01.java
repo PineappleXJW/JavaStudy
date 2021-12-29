@@ -35,10 +35,42 @@ package com.hunau.Array.ArrayTest01;
  *          ①由于为了保证数组中每个元素的内存地址连续，所以在数组上随机删除或插入元素的时候效率极低，因为
  *       随机增删元素会涉及到后面元素统一向前或后位移的操作；
  *          ②数组不能存储大数据量，因为很难在内存中找到大块连续的空间。
- *
+ *       对数组最后一个元素的 增删是没有效率影响的
+ * 14、怎么声明或定义一个一维数组：
+ *      int[] a;
+ *      double[] a;
+ *      boolean[] a;
+ *      String[] a;
+ *      Object[] a;
+ * 15、怎么初始化一个一维数组：
+ *      (1)静态初始化
+ *          int[] array = {100,2100,300,55};
+ *      (2)动态初始化
+ *          int[] array = new int[5];//5表示数组的元素个数
+ *                                  //初始化一个5个长度的int类型数组，每个元素默认值0
+ *          String[] names = new String[6]; //初始化6个长度的String类型数组，每个元素默认值null
  */
 public class ArrayTest01 {
     public static void main(String[] args) {
+        int[] a1 = {1,100,10,20,55,689};
 
+        System.out.println("数组中元素的个数为："+ a1.length);
+
+        System.out.println("第一个元素是："+a1[0]);
+        System.out.println("最后一个元素是：" + a1[5]);
+        System.out.println("最后一个元素是：" + a1[a1.length-1]);
+
+        //修改值
+        a1[0] = 111;
+        a1[a1.length-1] = 0;
+        System.out.println("修改后：");
+        System.out.println("第一个元素是："+a1[0]);
+        System.out.println("最后一个元素是：" + a1[5]);
+        System.out.println("最后一个元素是：" + a1[a1.length-1]);
+
+        //遍历
+        for (int i=0;i < 6;i++){
+            System.out.println(a1[i]);
+        }
     }
 }
