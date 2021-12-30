@@ -72,5 +72,11 @@ public class ArrayTest01 {
         for (int i=0;i < 6;i++){
             System.out.println(a1[i]);
         }
+        for (int j=a1.length-1;j>=0;j--){
+            System.out.println(a1[j]);
+        }
+
+        //越界
+        System.out.println(a1[6]);  //ArrayIndexOutOfBoundsException数组下标越界
     }
 }
